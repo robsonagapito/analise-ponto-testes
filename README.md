@@ -1,6 +1,10 @@
 analise-ponto-testes
 ====================
 
+SOBRE
+
+O AgaAPT.exe é uma ferramenta de apoio para estimativa de testes utilizando a técnica de análise de pontos de testes. Foi idealizado e desenvolvido por Robson Agapito Correa e teve como tester o André Miranda.
+
 VERSÃO E COMPILADOR
 
 O sistema foi desenvolvido em Delphi 7 e necessita dele para compilação do mesmo.
