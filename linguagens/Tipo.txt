@@ -1,0 +1,7 @@
+ERP
+Bancário
+Hospitalar
+Governamental
+Frente de Loja
+Open Source
+Telecomunicação

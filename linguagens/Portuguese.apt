@@ -1,0 +1,367 @@
+[formAPT.pnlTituloAPT.TPanel]<>
+[formAPT.rgVisualizar.TRadioGroup]<Visualização>
+[formAPT.lblProjeto.TLabel]<Projeto:>
+[formAPT.btnNovo.TBitBtn]<&Novo>
+[formAPT.btnExcluir.TBitBtn]<&Excluir>
+[formAPT.btnEditar.TBitBtn]<E&ditar>
+[formAPT.pnlGeral.TPanel]<>
+[formAPT.ts_PTD.TTabSheet]<PTD>
+[formAPT.ts_PTD_PF.TTabSheet]<PF - Pontos por Função>
+[formAPT.gbPF.TGroupBox]<Pontos por Função Pré-definido>
+[formAPT.gbPDTAjuda.TGroupBox]<Ajuda>
+[formAPT.memPF.TMemo]<Tamanho do sistema em Pontos de Função. 
+
+O valor mínimo para este valor é de 500 PF, mas está aberto para ser colocado menor para experiências com outros valores.
+>
+[formAPT.ts_PTD_FDf.TTabSheet]<FDf - Funções Dependentes>
+[formAPT.pnlFD.TPanel]<pnlFD>
+[formAPT.rgUe.TDBRadioGroup]<Ue - Importância do Usuário>
+[formAPT.rgI.TDBRadioGroup]<I - Interface>
+[formAPT.rgUy.TDBRadioGroup]<Uy - Intensidade de Uso>
+[formAPT.rgC.TDBRadioGroup]<C- Complexidade>
+[formAPT.gbU.TGroupBox]<U - Uniformidade>
+[formAPT.pnlFDFBotoes.TPanel]<>
+[formAPT.FDFBotExcluir.TButton]<Excluir>
+[formAPT.ts_PTD_FDf_Reg.TTabSheet]<Registros>
+[formAPT.ts_PTD_FDf_Sobre.TTabSheet]<Ajuda>
+[formAPT.memFDf.TMemo]<Fatores das Funções Dependentes:
+
+* Importância dada pelo usuário (ou pelos próprios desenvolvedores) à função testada (Ue);
+
+* Intensidade de uso (Uy) - deve ser levantado o nível de utilização da função por intervalo de tempo (por ex.: um dia);
+
+* Interface (I) - o fator de interface entre a quantidade de arquivos usados pela função testada e a quantidade de funções que usam estes mesmos arquivos. Como podemos visualizar na Tabela 1, podemos levar em consideração duas informações, a quantidade de DataSets e a Quantidade de Funções na Interface, conseguindo assim determinar qual classe estaria a minha Interface.
+
+* Complexidade da função a ser testada (C) - medida através de comandos de condição; Como podemos ver na Tabela 2 ao lado, podemos levar em consideração as condições contidas dentro de uma funcionalidade para determinar a complexidade.
+
+* Uniformidade (U) - mede o grau de re-utilização do material de teste.
+
+FDf = [(Ue + Uy + I + C)/20] x U
+>
+[formAPT.Panel1.TPanel]<Panel1>
+[formAPT.gbImgComlex.TGroupBox]<Tabela 2 - Complexidade>
+[formAPT.gbImgInterface.TGroupBox]<Tabela 1 - Interface>
+[formAPT.pnlImgFunArq.TPanel]<pnlImgFunArq>
+[formAPT.pnlImgArq.TPanel]<Arquivos>
+[formAPT.pnlImgFun.TPanel]<Funções>
+[formAPT.ts_PTD_QRd.TTabSheet]<QRd - Qualidade Dinâmica>
+[formAPT.ts_PTD_QRd_CE.TTabSheet]<CE - Características Explicitas>
+[formAPT.rgCEFunc.TDBRadioGroup]<Funcionalidade>
+[formAPT.rgCEEfetividade.TDBRadioGroup]<Aderência e Efetividade>
+[formAPT.rgCESeguranca.TDBRadioGroup]<Segurança>
+[formAPT.rgCEPerformance.TDBRadioGroup]<Performance>
+[formAPT.gbCEAjuda.TGroupBox]<Ajuda>
+[formAPT.memCE.TMemo]<As características de qualidade dinâmica (QRd) medem como a qualidade dos requisitos pode afetar a qualidade dos testes.
+
+Tabela:
+
+0 - A qualidade dos requisitos não é importante para o resultado dos testes.
+3 - A qualidade dos requisitos não é importante, mas eles precisam ser considerados para o resultado dos testes.
+4 - A qualidade dos requisitos tem importância média.
+5 - A qualidade dos requisitos é muito importante.
+6 - A qualidade dos requisitos é extremamente importante.
+
+Devem também ser considerados os seguintes pesos:
+
+Funcionalidade = 0,75
+Segurança = 0,05
+Performance = 0,10
+Aderência/Efetividade = 0,10
+
+Por exemplo:
+
+F = Valor Atribuído (valor da tabela acima) x 0,75 / 4
+
+O mesmo procedimento deve ser repetido para cada uma das características, ou seja, segurança, performance e aderência.
+
+CE = (F + P + S + A)
+>
+[formAPT.ts_PTD_QRd_CI.TTabSheet]<CI - Características Implícitas>
+[formAPT.pnlCI.TPanel]<>
+[formAPT.gbCIAjuda.TGroupBox]<Ajuda>
+[formAPT.memCI.TMemo]<As características implícitas são utilizadas quando houver coleta de dados e/ou indicadores, para futuras medições quanto à qualidade dos testes.
+
+Estes indicadores servirão para fornecer uma média ou medida padrão para utilizar como comparação com o projeto em andamento.
+
+Por exemplo, pode ser medido o número de horas gastas por cada etapa de teste, ou o número de defeitos coletados, etc.
+
+CI = n x 0,02 (onde n varia entre 0 a 4)
+
+Onde n = quantidade de indicadores.
+
+Sempre que houverem indicadores que sejam utilizados para avaliar uma das características explícitas (funcionalidade, performance, segurança e aderência), considera-se que pode existir uma característica implícita associada, mantendo-se o limite de 4, sendo admitido 1 para cada característica explícita.
+>
+[formAPT.pnlPTD.TPanel]<PTD - Pontos de Teste Dinâmico >
+[formAPT.ts_PTE.TTabSheet]<PTE>
+[formAPT.pnlPTETit.TPanel]<PTE - Pontos de Testes Estáticos>
+[formAPT.pnlPTEGer.TPanel]<>
+[formAPT.gbPTEAjuda.TGroupBox]<Ajuda>
+[formAPT.memPTE.TMemo]<Os pontos de teste estáticos levam em consideração o sistema como um todo, diferentemente dos pontos de teste dinâmicos, que consideram cada uma das características isoladamente.
+
+Somente devem ser considerados quando a equipe de testes adotar processos de revisão de documentação e de códigos usando checklists, caso contrário deve ser descartado e terá valor nulo.
+
+O cálculo dos pontos de teste estáticos toma como base os critérios de qualidade para a avaliação das características anteriormente citadas (funcionalidade, performance, segurança, aderência).
+
+Normalmente esta avaliação é feita a partir de checklists, um para cada característica. Para cada checklist usado são adicionados 16 pontos de teste.
+
+PTE = 16 x n
+
+Onde "n" é o número de checklists usados para avaliar as características de qualidade do sistema, sendo menor ou igual a 4.
+>
+[formAPT.ts_AT.TTabSheet]<AT>
+[formAPT.pnlAT.TPanel]<AT - Ambiente de Testes>
+[formAPT.ts_AT_01.TTabSheet]<AT-01>
+[formAPT.rgATDocumentacao.TDBRadioGroup]<Documentação de Teste>
+[formAPT.rgATPrecedencia.TDBRadioGroup]<Teste de Precedência>
+[formAPT.rgATFerramenta.TDBRadioGroup]<Ferramentas de Teste>
+[formAPT.gbATAjuda.TGroupBox]<Ajuda>
+[formAPT.memAT.TMemo]<Testes de Precedência:
+
+Se um teste de integração for bem executado, os resultados do teste seguinte - no caso, o teste de sistema - serão melhores.
+
+Para cada etapa do processo de teste, a atividade imediatamente anterior deve produzir bons resultados para que a atividade seguinte seja bem executada.
+
+A melhor maneira de conduzir esse trabalho é a partir de um plano de testes com resultados palpáveis.
+
+AT = (Soma dos Fatores de AT-01 e AT-02) / 21
+>
+[formAPT.ts_AT_02.TTabSheet]<AT-02>
+[formAPT.rgATTestware.TDBRadioGroup]<Testware>
+[formAPT.rgATAmbienteT.TDBRadioGroup]<Ambiente de Teste>
+[formAPT.rgATAmbienteD.TDBRadioGroup]<Ambiente de Desenvolvimento>
+[formAPT.ts_QET.TTabSheet]<QET>
+[formAPT.pnlQET.TPanel]<QET - Qualificação da Equipe de Testes>
+[formAPT.gbQETAjuda.TGroupBox]<Ajuda>
+[formAPT.memQET.TMemo]<Normalmente este valor é determinado por uma base histórica e deve variar entre 0,7 e 2,0, onde deve ser considerado a experiência e a qualificação da equipe de teste.
+
+Estes fatores estão diretamente ligados à produtividade da equipe de testes.
+
+Quanto melhor e mais qualificada for a equipe menor será o valor da QET.
+>
+[formAPT.ts_IPC.TTabSheet]<IPC>
+[formAPT.pnlIPC.TPanel]<IPC - Índice de Planejamento e Controle>
+[formAPT.rgIPCTamanho.TDBRadioGroup]<Tamanho da Equipe>
+[formAPT.rgIPCFerramenta.TDBRadioGroup]<Ferramenta de Gerenciamento>
+[formAPT.gbIPCAjuda.TGroupBox]<Ajuda>
+[formAPT.memIPC.TMemo]<A soma dos dois fatores será um valor percentual a ser acrescido ao total de horas primárias de testes e fará parte do total de horas das fases de planejamento e controle.
+
+IPC = 1 + (TE + FG)
+>
+[formAPT.ts_Tot.TTabSheet]<Totalizador>
+[formAPT.lblPTD.TLabel]<Pontos de Teste Dinâmicos>
+[formAPT.lblPTE.TLabel]<Pontos de Teste Estático>
+[formAPT.lblPT.TLabel]<Total de Pontos de Teste>
+[formAPT.lblHTP.TLabel]<Horas de  Teste Primárias>
+[formAPT.lblTHT.TLabel]<Total de Horas de Teste>
+[formAPT.lblQET.TLabel]<Qualificação da Equipe de Testes>
+[formAPT.lblAT.TLabel]<Ambiente de Teste>
+[formAPT.lblFC.TLabel]<Fatores de Controle>
+[formAPT.pnlCabTot.TPanel]<Totalizador>
+[formAPT.pnlTotRes.TPanel]<>
+[formAPT.pnlTotResCab.TPanel]<>
+[formAPT.lblHorasPrev.TLabel]<Horas Previstas>
+[formAPT.lblHorasReal.TLabel]<Horas Realizadas>
+[formAPT.butEmail.TBitBtn]<&Enviar Email>
+[formAPT.tsCap.TTabSheet]<tsCap>
+[formAPT.btnCap.TButton]<Traz Caption>
+[formAPT.btnSavCap.TButton]<Salva>
+[formAPT.butAvancar.TBitBtn]<&Avançar>
+[formAPT.ButVoltar.TBitBtn]<&Voltar>
+[formAPT.pnlBotao.TPanel]<>
+[formAPT.btnGravar.TBitBtn]<&Gravar>
+[formAPT.btnSair.TBitBtn]<&Sair>
+[formAPT.cdsFDCodigo.TIntegerField]<Código>
+[formAPT.cdsFDTitulo.TStringField]<Título>
+[formAPT.cdsFDUe.TStringField]<Ue>
+[formAPT.cdsFDUy.TStringField]<Uy>
+[formAPT.cdsFDInterface.TStringField]<Interface>
+[formAPT.cdsFDComplexidade.TStringField]<Complexidade>
+[formAPT.cdsFDCodigoProj.TStringField]<CodigoProj>
+[formAPT.cdsFDPontos.TFloatField]<Pontos>
+[formAPT.cdsFDUniformidade.TStringField]<Uniformidade>
+[formAPT.cdsAPTCodigo.TStringField]<Codigo>
+[formAPT.cdsAPTTitulo.TStringField]<Titulo>
+[formAPT.cdsAPTPF.TIntegerField]<PF>
+[formAPT.cdsAPTCE_Funcionalidade.TStringField]<CE_Funcionalidade>
+[formAPT.cdsAPTCE_Performance.TStringField]<CE_Performance>
+[formAPT.cdsAPTCE_Seguranca.TStringField]<CE_Seguranca>
+[formAPT.cdsAPTCE_Efetividade.TStringField]<CE_Efetividade>
+[formAPT.cdsAPTCI_Funcionalidade.TStringField]<CI_Funcionalidade>
+[formAPT.cdsAPTCI_Performance.TStringField]<CI_Performance>
+[formAPT.cdsAPTCI_Seguranca.TStringField]<CI_Seguranca>
+[formAPT.cdsAPTCI_Efetividade.TStringField]<CI_Efetividade>
+[formAPT.cdsAPTPTE_Funcionalidade.TStringField]<PTE_Funcionalidade>
+[formAPT.cdsAPTPTE_Seguranca.TStringField]<PTE_Seguranca>
+[formAPT.cdsAPTPTE_Performance.TStringField]<PTE_Performance>
+[formAPT.cdsAPTPTE_Efetividade.TStringField]<PTE_Efetividade>
+[formAPT.cdsAPTAT_Ferramenta.TStringField]<AT_Ferramenta>
+[formAPT.cdsAPTAT_Precedencia.TStringField]<AT_Precedencia>
+[formAPT.cdsAPTAT_Documentacao.TStringField]<AT_Documentacao>
+[formAPT.cdsAPTAT_AmbienteD.TStringField]<AT_AmbienteD>
+[formAPT.cdsAPTAT_AmbienteT.TStringField]<AT_AmbienteT>
+[formAPT.cdsAPTAT_Testware.TStringField]<AT_Testware>
+[formAPT.cdsAPTQET.TStringField]<QET>
+[formAPT.cdsAPTIPC_Equipe.TStringField]<IPC_Equipe>
+[formAPT.cdsAPTIPC_Ferramenta.TStringField]<IPC_Ferramenta>
+[formAPT.cdsAPTCodigoProj.TStringField]<CodigoProj>
+[formAPT.cdsProjetoCodigo.TStringField]<Codigo>
+[formAPT.cdsProjetoTitulo.TStringField]<Titulo>
+[formAPT.cdsProjetoTipo.TStringField]<Tipo>
+[formAPT.cdsProjetoHoraPrev.TFloatField]<HoraPrev>
+[formAPT.cdsProjetoHoraReal.TFloatField]<HoraReal>
+[formAPT.cdsTotais_Sigla.TStringField]<Sigla>
+[formAPT.cdsTotais_Descricao.TStringField]<Descrição>
+[formAPT.cdsTotais_Formula.TStringField]<Fórmula>
+[formAPT.cdsTotais_Resultado.TFloatField]<Resultado>
+[formAPT.EmailCodigo.TStringField]<Codigo>
+[formAPT.EmailTitulo.TStringField]<Titulo>
+[formAPT.EmailTipo.TStringField]<Tipo>
+[formAPT.EmailHP.TFloatField]<HoraPrev>
+[formAPT.EmailHR.TFloatField]<HoraReal>
+[formAPT.lblLingua.TLabel]<Linguagem>
+
+[formAPT.ckCIFuncionalidade.TDBChecBox]<Functionalidade>
+[formAPT.ckCISeguranca.TDBChecBox]<Segurança>
+[formAPT.ckCIPerformance.TDBChecBox]<Performance>
+[formAPT.ckCIEfetividade.TDBChecBox]<Efetividade>
+
+[formAPT.ckPTEFunc.TDBChecBox]<Functionalidade>
+[formAPT.ckPTESeg.TDBChecBox]<Segurança>
+[formAPT.ckPTEPerf.TDBChecBox]<Performance>
+[formAPT.ckPTEEfet.TDBChecBox]<Efetividade>
+
+
+[.#NORMAL.]<Normal>
+[.#ALTA.]<Alta>
+[.#BAIXA.]<Baixa>
+[.#NTEXTO.]<De 6 a 11 condições>
+[.#ATEXTO.]<Mais que 11 Condições>
+[.#BTEXTO.]<Até 5 Condições>
+
+[.#ATFERRAM01.]<1 - Existe uma ferramenta de automação para as fases de especificação e execução dos testes.>
+[.#ATFERRAM02.]<2 - Existe uma ferramenta de automação para as fases de especificação ou para a fase de execução dos testes.>
+[.#ATFERRAM03.]<4 - Não existe ferramenta de automação de teste.>
+
+[.#ATPRECED01.]<2 - Existe um plano para o teste precedente e a equipe está familiarizada com ele, assim como com os respectivos casos de teste e resultados de teste.>
+[.#ATPRECED02.]<4 - Existe um plano para o teste precedente.>
+[.#ATPRECED03.]<8 - Não existe um plano para o teste precedente.>
+
+[.#ATDOCUME01.]<3 - Durante o desenvolvimento  do sistema são usados padrões de documentação e templates. Há revisões periódicas da documentação.>
+[.#ATDOCUME02.]<6 - Durante o desenvolvimento  do sistema são usados alguns padrões de documentação e templates. Eventualmente há revisões periódicas da documentação.>
+[.#ATDOCUME03.]<12 - A documentação não segue nenhum padrão nem templates são usados.>
+
+[.#ATDESENV01.]<2 - O sistema foi desenvolvido usando uma linguagem de quarta geração, integrada a um sistema de gerência de banco de dados.>
+[.#ATDESENV02.]<4 - O sistema foi desenvolvido usando uma combinação de linguagens de 4ª e 3ª geração.>
+[.#ATDESENV03.]<8 - O sistema foi desenvolvido em linguagem de 3ª geração como COBOL, PASCAL, C++, Delphi, ASP, Html, etc.>
+
+[.#ATTESTES01.]<1 - O ambiente de teste já foi usado inúmeras vezes.>
+[.#ATTESTES02.]<2 - O ambiente de teste é similar ao que já vinha sendo usado anteriormente.>
+[.#ATTESTES03.]<4 - O ambiente de teste é completamente novo e experimental.>
+
+[.#ATTESTWA01.]<1 - Existe um material de teste, tais como bases de dados, tabelas, casos de teste, e outros, que poderão ser re-utilizados.>
+[.#ATTESTWA02.]<2 - Existem apenas tabelas e bases de dados disponíveis para re-utilização.>
+[.#ATTESTWA03.]<4 - Não existe testware disponível.>
+
+[.#IPCFERRA01.]<0,02 - Existem ferramentas de registro de tempo e de gerência de defeitos, além de ferramentas de gerência de configuração.>
+[.#IPCFERRA02.]<0,04 - Apenas uma das ferramentas citadas acima está disponível.>
+[.#IPCFERRA03.]<0,08 - Não existem ferramentas disponíveis.>
+
+[.#IPCEQUIP01.]<0,03 - Entre 3 e 4 técnicos.>
+[.#IPCEQUIP02.]<0,06 - Entre 5 e 10 técnicos.>
+[.#IPCEQUIP03.]<0,12 - Mais de 10 técnicos.>
+
+[.#MSN01.]<Deseja salvar alterações antes de sair?>
+[.#MSN02.]<Não é possível criar o Diretório = >
+[.#MSN03.]<Deseja realmente excluir este Projeto?>
+[.#MSN04.]<Deseja Registrar o Midas.dll>
+[.#MSN05.]<O arquivo Midas.dll está no mesmo diretório do Executável?>
+[.#MSN06.]<DLL Registrada com sucesso Reinicio o Sistema APT.>
+[.#MSN07.]<Somente é aceitável um valor numérico.>
+[.#MSN08.]<Número referente a PF tem que ser maior que Zero.>
+[.#MSN09.]<É aconselhavel que PF seja maior que 500
+para que o valor final da Análise não seja afetado.
+Continua mesmo assim?>
+[.#MSN10.]<Deseja realmente deletar funcionalidade?>
+[.#MSN11.]<Deseja atualizar Horas Prevista?>
+[.#MSN12.]<Somente é aceitável um valor numérico, positivo e inteiro.>
+[.#MSN13.]<Necessário informar o valor de horas realizadas.>
+
+
+[.#GTPF01.]<PF>
+[.#GTPF02.]<Pontos por Função>
+[.#GTPF03.]<PF>
+
+[.#GTFDF01.]<FDf>
+[.#GTFDF02.]<Funções Dependentes>
+[.#GTFDF03.]<[(Ue + Uy + I + C)/20.] x U>
+
+[.#GTCE01.]<CE>
+[.#GTCE02.]<Características Explícitas>
+[.#GTCE03.]<F + P + S + A>
+
+[.#GTCI01.]<CI>
+[.#GTCI02.]<Características Implícitas>
+[.#GTCI03.]<n x 0,02 (n de 0 a 4)>
+
+[.#GTQRD01.]<QRd>
+[.#GTQRD02.]<Qualidade Dinâmica>
+[.#GTQRD03.]<CE + CI>
+
+[.#GTPTD01.]<PTD>
+[.#GTPTD02.]<Pontos de Teste Dinâmicos>
+[.#GTPTD03.]<PF x FD x QRd>
+
+[.#GTPTE01.]<PTE>
+[.#GTPTE02.]<Pontos de Teste Estáticos>
+[.#GTPTE03.]<16 x n (n de 0 a 4)>
+
+[.#GTPT01.]<PT>
+[.#GTPT02.]<Pontos de Testes>
+[.#GTPT03.]<Sum(PTDf) + (PF x PTE) / 500)>
+
+[.#GTAT01.]<AT>
+[.#GTAT02.]<Ambiente de Testes>
+[.#GTAT03.]<(Soma de todos os Fatores)/21>
+
+[.#GTQET01.]<QET>
+[.#GTQET02.]<Qualificação Equipe Testes>
+[.#GTQET03.]<Entre 0,7 e 2,0>
+
+[.#GTHTP01.]<HTP>
+[.#GTHTP02.]<Horas de Testes Primárias>
+[.#GTHTP03.]<PT x QET x AT>
+
+[.#GTIPC01.]<IPC>
+[.#GTIPC02.]<Índice de Planej. Controle>
+[.#GTIPC03.]<1 + (Equipe + Ferramenta)>
+
+[.#GTTHT01.]<THT>
+[.#GTTHT02.]<Total de Horas de Teste>
+[.#GTTHT03.]<HTP + IPC>
+
+[.#SIM.]<Sim>
+[.#NAO.]<Não>
+[.#CANCEL.]<Cancelar>
+
+[.#NOME.]<Nome>
+[.#EMAIL.]<Email>
+[.#ENVIAR.]<Enviar>
+[.#SAIR.]<Sair>
+
+[.#CODIGO.]<Código>
+[.#TITULO.]<Título>
+[.#TIPOPR.]<Tipo do Projeto>
+[.#LINGUA.]<Linguagem>
+
+[.#FORMEMAIL.]<Email>
+[.#MSN100.]<Necessário informar o seu nome.>
+[.#MSN101.]<Necessário informar um email válido.>
+[.#MSN102.]<Email enviado com sucesso!>
+
+[.#FORMPROJETO.]<Cadastro de Projetos>
+[.#MSN200.]<Necessário informar o Código do Projeto>
+[.#MSN201.]<Necessário informar o Tipo do Projeto>
+[.#MSN202.]<Necessário informar o Título do Projeto>
+
+[.#VISU01.]<Wizard>
+[.#VISU02.]<Geral>

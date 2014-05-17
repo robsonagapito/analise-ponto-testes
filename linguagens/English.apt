@@ -1,0 +1,361 @@
+[formAPT.pnlTituloAPT.TPanel]<>
+[formAPT.rgVisualizar.TRadioGroup]<Visualization>
+[formAPT.lblProjeto.TLabel]<Project:>
+[formAPT.btnNovo.TBitBtn]<&New>
+[formAPT.btnExcluir.TBitBtn]<&Delete>
+[formAPT.btnEditar.TBitBtn]<E&dit>
+[formAPT.pnlGeral.TPanel]<>
+[formAPT.ts_PTD.TTabSheet]<PTD>
+[formAPT.ts_PTD_PF.TTabSheet]<FP - Function Points>
+[formAPT.gbPF.TGroupBox]<Pre-definide Function Points>
+[formAPT.gbPDTAjuda.TGroupBox]<Help>
+[formAPT.memPF.TMemo]<Size System in Function Points.
+
+The minimun value for FP is 500, but it is open to inform for experience with others values.
+>
+[formAPT.ts_PTD_FDf.TTabSheet]<DFf -
+ Dependet Function>
+[formAPT.pnlFD.TPanel]<pnlFD>
+[formAPT.rgUe.TDBRadioGroup]<Ue - User Importance>
+[formAPT.rgI.TDBRadioGroup]<I - Interfacing>
+[formAPT.rgUy.TDBRadioGroup]<Uy - Usage Intensity>
+[formAPT.rgC.TDBRadioGroup]<C- Complexity>
+[formAPT.gbU.TGroupBox]<U - Uniformity>
+[formAPT.pnlFDFBotoes.TPanel]<>
+[formAPT.FDFBotExcluir.TButton]<Delete>
+[formAPT.ts_PTD_FDf_Reg.TTabSheet]<Register>
+[formAPT.ts_PTD_FDf_Sobre.TTabSheet]<Help>
+[formAPT.memFDf.TMemo]<Dependent Functions Factor:
+
+* User-importance (Ue)
+The user-significance is an expression of the importance that the user attaches to a given function relative to the other system functions. A useful rule of thumb is that about 25 per cent of functions should be placed in the “high” category, 50 per cent in the “normal” category and 25 per cent in the “low” category;
+
+* Usage-intensity (Uy)
+The usage intensity has been defined as the frequency with which a certain function is processed by the users and the size of the user group that uses the function. As with user-importance the usageintensity is being determined at a user-function level;
+
+* Interfacing (I)
+Interfacing is an expression of the extent to which a modification in a given function affects other parts of the system. The degree of interfacing is determined by ascertaining first the logical data sets (LDSs) which the function in question can modify, then the other functions which access these LDS;
+
+* Complexity (C)
+The complexity of a function is determined on the basis of its algorithm. The general structure of the algorithm may be described using pseudo code, Nassi-Shneiderman or ordinary text. The complexity rating of the function depends on the number of conditions in the function's algorithm. When counting the conditions, only the processing algorithm should be considered. Conditions which are the result of database checks, such as domain validations or physical presence checks do not count, since these are implicitly included in the function point count.
+
+* Uniformity (U)
+Under the following circumstances, only 60% of the test points assigned to the function under analysis count towards the system total:
+• In the case of a second occurrence of a virtually unique function: in such cases, the test specifications can be largely reused.
+• In the case of a clone function: the test specifications can be reused for clone functions.
+• In the case of a dummy function (provided that reusable test specifications have already been drawn up for the dummy).
+
+A uniformity factor of 0.6 is assigned in cases of the kinds described above; otherwise a uniformity factor of 1 is assigned. An information system may therefore contain functions that possess a degree of uniformity for test purposes, even though they are regarded as unique in the context of a function point analysis.
+FDf = [(Ue + Uy + I + C)/20] x U
+>
+[formAPT.Panel1.TPanel]<Panel1>
+[formAPT.gbImgComlex.TGroupBox]<Table 2 - Complexity>
+[formAPT.gbImgInterface.TGroupBox]<Table 1 - Interfacing>
+[formAPT.pnlImgFunArq.TPanel]<pnlImgFunArq>
+[formAPT.pnlImgArq.TPanel]<Files>
+[formAPT.pnlImgFun.TPanel]<Functions>
+[formAPT.ts_PTD_QRd.TTabSheet]<DQ - Dynamic quality>
+[formAPT.ts_PTD_QRd_CE.TTabSheet]<EM - Explicitly Measurable>
+[formAPT.rgCEFunc.TDBRadioGroup]<Funcionality>
+[formAPT.rgCEEfetividade.TDBRadioGroup]<Efficiency>
+[formAPT.rgCESeguranca.TDBRadioGroup]<Security>
+[formAPT.rgCEPerformance.TDBRadioGroup]<Performance>
+[formAPT.gbCEAjuda.TGroupBox]<Help>
+[formAPT.memCE.TMemo]<The paragraphs below describe how the requirements relating to dynamic measurable quality characteristics are taken into account in the TPA process. In this context, distinction is made betweenimplicitly and explicitly measurable quality characteristics.
+
+Table:
+
+0 - Quality requirements are not important and are therefore disregarded for test purposes.
+3 - Quality requirements are relatively unimportant but do need to be taken into consideration for test purposes.
+4 - Quality requirements are of normal importance. (This rating is generally appropriate where the information system relates to a support process.)
+5 - Quality requirements are very important. (This rating is generally appropriate where the information system relates to a primary process.)
+6 - Quality requirements are extremely important
+
+Dynamic, explicitly measurable quality characteristics - (weighting):
+
+Funcionality = 0,75
+Security = 0,05
+Performance = 0,10
+Efficiency = 0,10
+
+For example:
+
+F = Attribute Value (Table Value above) x 0,75 / 4
+
+The same procedure must to be done for each of the characteristic (security, performance e Efficiency).
+
+EM = (F + P + S + E)
+>
+[formAPT.ts_PTD_QRd_CI.TTabSheet]<IM - Implicity Measurable>
+[formAPT.pnlCI.TPanel]<>
+[formAPT.gbCIAjuda.TGroupBox]<Help>
+[formAPT.memCI.TMemo]<The implicitly measurable quality characteristics are to be included in the test, the appropriate weighting (0.02 for each characteristic) should be added to the result obtained for the dynamic, explicitly measurable quality characteristics. The figure thus calculated is the Qd factor. Normally, a single Qd factor can be calculated for the system as a whole. However, if different test strategies are to be used for the various subsystems, a separate Qd factor calculation should be made for each subsystem.
+
+IM = n x 0,02 (n from 0 to 4)
+
+n = Indicators quantity.
+>
+[formAPT.pnlPTD.TPanel]<DTP - Dynamic Testing Points >
+[formAPT.ts_PTE.TTabSheet]<STP>
+[formAPT.pnlPTETit.TPanel]<STP - Static Testing Points>
+[formAPT.pnlPTEGer.TPanel]<>
+[formAPT.gbPTEAjuda.TGroupBox]<Help>
+[formAPT.memPTE.TMemo]<The indirect test point count depends mainly on the function point count for the system as a whole. The indirect test point count is also influenced by the requirements regarding the static quality characteristics to be tested (the Qi factor).
+
+One has to determine whether the static measurable quality characteristics are relevant for test purposes. A static test can be carried out using a checklist. In principle all ISO 9126 quality characteristics [3] can de tested using a checklist.
+
+E.g. Security can therefore be measured dynamically, using a semantic test, and/or statically, by evaluating the security measures with the support of a checklist.
+
+Method of calculation (Qi(If a quality characteristic is tested by means of a checklist (static test), the factor Qi get the value sixteen. For each subsequent quality characteristic to be included in the static test, another sixteen is added to the Qi factor rating.
+>
+[formAPT.ts_AT.TTabSheet]<TE>
+[formAPT.pnlAT.TPanel]<TE - Testing Environment>
+[formAPT.ts_AT_01.TTabSheet]<TE-01>
+[formAPT.rgATDocumentacao.TDBRadioGroup]<Test Basis>
+[formAPT.rgATPrecedencia.TDBRadioGroup]<
+Development testing>
+[formAPT.rgATFerramenta.TDBRadioGroup]<Test tools>
+[formAPT.gbATAjuda.TGroupBox]<Help>
+[formAPT.memAT.TMemo]<
+The development testing variable reflects the quality of earlier testing. If the estimate under preparation is for an acceptance test, the earlier testing will have been system testing; if the estimate is for a system test, the earlier testing will have been white-box testing. The quality of such development testing influences the amount of functionality that may be require less thorough testing with less coverage and the duration of the test activities. For, the better the development testing, the less likely one is to encounter time-consuming problems during the test currently under consideration.
+
+TE = (Factores Sum of TE-01 and TE-02) / 21
+>
+[formAPT.ts_AT_02.TTabSheet]<TE-02>
+[formAPT.rgATTestware.TDBRadioGroup]<Testware>
+[formAPT.rgATAmbienteT.TDBRadioGroup]<Test environment>
+[formAPT.rgATAmbienteD.TDBRadioGroup]<Development environment>
+[formAPT.ts_QET.TTabSheet]<QET>
+[formAPT.pnlQET.TPanel]<TTQ - Testing Team Qualification>
+[formAPT.gbQETAjuda.TGroupBox]<Help>
+[formAPT.memQET.TMemo]<The productivity factor indicates the number of test hours required per test point. The higher the productivity factor, the greater the number of test hours required. The productivity factor is a measure of the experience, knowledge and skill of the test team. The productivity factor can vary from one organization to the next or from one organizational unit to the next. Productivity factors can be calculated by analyzing completed test projects; thus, historical data on such projects is necessary for productivity factor determination.
+
+In practice the productivity factor has shown to have a value between 0,7 and 2.0
+>
+[formAPT.ts_IPC.TTabSheet]<PCI>
+[formAPT.pnlIPC.TPanel]<PCI - Planning and Control Index>
+[formAPT.rgIPCTamanho.TDBRadioGroup]<ST - Size team>
+[formAPT.rgIPCFerramenta.TDBRadioGroup]<MT - Management Tools>
+[formAPT.gbIPCAjuda.TGroupBox]<Help>
+[formAPT.memIPC.TMemo]<The planning and management percentage is obtained by adding together the ratings for the two influential factors (team size and planning and control tools). The allowance in hours is calculated by multiplying the primary test hour count by this percentage. Addition of the planning and control allowance to the number of primary test hours gives the total number of test hours.
+
+PCI = 1 + (ST + MT)
+>
+[formAPT.ts_Tot.TTabSheet]<Totalizer>
+[formAPT.lblPTD.TLabel]<Dynamic Testing Points>
+[formAPT.lblPTE.TLabel]<Static Testing Points>
+[formAPT.lblPT.TLabel]<Testing Points Total>
+[formAPT.lblHTP.TLabel]<Primary Testing Hours>
+[formAPT.lblTHT.TLabel]<Testing Hours Total>
+[formAPT.lblQET.TLabel]<Testing Team Qualification>
+[formAPT.lblAT.TLabel]<Testing Environment>
+[formAPT.lblFC.TLabel]<Control Factors>
+[formAPT.pnlCabTot.TPanel]<Totalizer>
+[formAPT.pnlTotRes.TPanel]<>
+[formAPT.pnlTotResCab.TPanel]<>
+[formAPT.lblHorasPrev.TLabel]<Preview Hours>
+[formAPT.lblHorasReal.TLabel]<Real Hours>
+[formAPT.butEmail.TBitBtn]<&Send Email>
+[formAPT.tsCap.TTabSheet]<tsCap>
+[formAPT.btnCap.TButton]<Traz Caption>
+[formAPT.btnSavCap.TButton]<Save>
+[formAPT.butAvancar.TBitBtn]<&Advance>
+[formAPT.ButVoltar.TBitBtn]<&Back>
+[formAPT.pnlBotao.TPanel]<>
+[formAPT.btnGravar.TBitBtn]<&Save>
+[formAPT.btnSair.TBitBtn]<&Exit>
+[formAPT.cdsFDCodigo.TIntegerField]<Id>
+[formAPT.cdsFDTitulo.TStringField]<Title>
+[formAPT.cdsFDUe.TStringField]<Ue>
+[formAPT.cdsFDUy.TStringField]<Uy>
+[formAPT.cdsFDInterface.TStringField]<Interfacing>
+[formAPT.cdsFDComplexidade.TStringField]<Complexity>
+[formAPT.cdsFDCodigoProj.TStringField]<CodigoProj>
+[formAPT.cdsFDPontos.TFloatField]<Points>
+[formAPT.cdsFDUniformidade.TStringField]<Uniformity>
+[formAPT.cdsAPTCodigo.TStringField]<Id>
+[formAPT.cdsAPTTitulo.TStringField]<Title>
+[formAPT.cdsAPTPF.TIntegerField]<FP>
+[formAPT.cdsAPTCE_Funcionalidade.TStringField]<CE_Funcionalidade>
+[formAPT.cdsAPTCE_Performance.TStringField]<CE_Performance>
+[formAPT.cdsAPTCE_Seguranca.TStringField]<CE_Seguranca>
+[formAPT.cdsAPTCE_Efetividade.TStringField]<CE_Efetividade>
+[formAPT.cdsAPTCI_Funcionalidade.TStringField]<CI_Funcionalidade>
+[formAPT.cdsAPTCI_Performance.TStringField]<CI_Performance>
+[formAPT.cdsAPTCI_Seguranca.TStringField]<CI_Seguranca>
+[formAPT.cdsAPTCI_Efetividade.TStringField]<CI_Efetividade>
+[formAPT.cdsAPTPTE_Funcionalidade.TStringField]<PTE_Funcionalidade>
+[formAPT.cdsAPTPTE_Seguranca.TStringField]<PTE_Seguranca>
+[formAPT.cdsAPTPTE_Performance.TStringField]<PTE_Performance>
+[formAPT.cdsAPTPTE_Efetividade.TStringField]<PTE_Efetividade>
+[formAPT.cdsAPTAT_Ferramenta.TStringField]<AT_Ferramenta>
+[formAPT.cdsAPTAT_Precedencia.TStringField]<AT_Precedencia>
+[formAPT.cdsAPTAT_Documentacao.TStringField]<AT_Documentacao>
+[formAPT.cdsAPTAT_AmbienteD.TStringField]<AT_AmbienteD>
+[formAPT.cdsAPTAT_AmbienteT.TStringField]<AT_AmbienteT>
+[formAPT.cdsAPTAT_Testware.TStringField]<AT_Testware>
+[formAPT.cdsAPTQET.TStringField]<QET>
+[formAPT.cdsAPTIPC_Equipe.TStringField]<IPC_Equipe>
+[formAPT.cdsAPTIPC_Ferramenta.TStringField]<IPC_Ferramenta>
+[formAPT.cdsAPTCodigoProj.TStringField]<CodigoProj>
+[formAPT.cdsProjetoCodigo.TStringField]<Id>
+[formAPT.cdsProjetoTitulo.TStringField]<Title>
+[formAPT.cdsProjetoTipo.TStringField]<Kind>
+[formAPT.cdsProjetoHoraPrev.TFloatField]<HoraPrev>
+[formAPT.cdsProjetoHoraReal.TFloatField]<HoraReal>
+[formAPT.cdsTotais_Sigla.TStringField]<Initials>
+[formAPT.cdsTotais_Descricao.TStringField]<Description>
+[formAPT.cdsTotais_Formula.TStringField]<Formula>
+[formAPT.cdsTotais_Resultado.TFloatField]<Result>
+[formAPT.EmailCodigo.TStringField]<Id>
+[formAPT.EmailTitulo.TStringField]<Title>
+[formAPT.EmailTipo.TStringField]<Kind>
+[formAPT.EmailHP.TFloatField]<HoraPrev>
+[formAPT.EmailHR.TFloatField]<HoraReal>
+[formAPT.lblLingua.TLabel]<Language>
+
+[formAPT.ckCIFuncionalidade.TDBChecBox]<Functionality>
+[formAPT.ckCISeguranca.TDBChecBox]<Security>
+[formAPT.ckCIPerformance.TDBChecBox]<Performance>
+[formAPT.ckCIEfetividade.TDBChecBox]<Efetivity>
+
+[formAPT.ckPTEFunc.TDBChecBox]<Functionality>
+[formAPT.ckPTESeg.TDBChecBox]<Security>
+[formAPT.ckPTEPerf.TDBChecBox]<Performance>
+[formAPT.ckPTEEfet.TDBChecBox]<Efetivity>
+
+
+[.#NORMAL.]<Normal>
+[.#ALTA.]<High>
+[.#BAIXA.]<Low>
+[.#NTEXTO.]<From 6 to 11 conditions>
+[.#ATEXTO.]<More than 11 conditions>
+[.#BTEXTO.]<Until 5 Conditions>
+
+[.#ATFERRAM01.]<1 - Testing involves the use of a query language such as SQL; a record and playback tool is also being used.>
+[.#ATFERRAM02.]<2 - Testing involves the use of a query language such as SQL, but no record and playback tool is being used.>
+[.#ATFERRAM03.]<4 - No test tools are available.>
+
+[.#ATPRECED01.]<2 - A development testing plan is available and the test team is familiar with the actual test cases and test results.>
+[.#ATPRECED02.]<4 - A development testing plan is available.>
+[.#ATPRECED03.]<8 - No development testing plan is available.>
+
+[.#ATDOCUME01.]<3 - During the system development documentation standards are being used and a template, in addition the inspections are organized.>
+[.#ATDOCUME02.]<6 - During the system development documentation standards are being used and a template.>
+[.#ATDOCUME03.]<12 - The system documentation was not developed using a specific standards and a template.>
+
+[.#ATDESENV01.]<2 - The system was developed using a 4 GL programming language with an integrated DBMS containing numerous constraints.>
+[.#ATDESENV02.]<4 - The system was developed using a 4 GL programming language, possibly in combination with a 3 GL programming language.>
+[.#ATDESENV03.]<8 - The system was developed using only a 3 GL programming language such as COBOL, PASCAL or RPG.>
+
+[.#ATTESTES01.]<1 - The environment has been used for testing several times in the past.>
+[.#ATTESTES02.]<2 - The test is to be conducted in a newly equipped environment similar to other well-used environments within the organization.>
+[.#ATTESTES03.]<4 - The test is to be conducted in a newly equipped environment which may be considered experimental within the organization.>
+
+[.#ATTESTWA01.]<1 - A usable general initial data set (tables, etc.) and specified test cases are available for the test.>
+[.#ATTESTWA02.]<2 - A usable general initial data set (tables, etc.) is available for the test.>
+[.#ATTESTWA03.]<4 - No usable testware is available.>
+
+[.#IPCFERRA01.]<0,02 - Both an automated time registration system and an automated defect tracking system (including CM) are available.>
+[.#IPCFERRA02.]<0,04 - Either an automated time registration system or an automated defect tracking system (including CM) is available.>
+[.#IPCFERRA03.]<0,08 - No automated (management) systems are available.>
+
+[.#IPCEQUIP01.]<0,03 - The team consists of no more than four people.>
+[.#IPCEQUIP02.]<0,06 - The team consists of between five and ten people.> 
+[.#IPCEQUIP03.]<0,12 - The team consists of more than ten people.>
+
+[.#MSN01.]<Do you wish to save your alterations before exit?>
+[.#MSN02.]<It isn't possible create folder = >
+[.#MSN03.]<Do you want delete this project?>
+[.#MSN04.]<Do you want register the Midas.dll?>
+[.#MSN05.]<Is The file Midas.dll in the same folder than executable?>
+[.#MSN06.]<DLL was to Success Registered.>
+[.#MSN07.]<Only numeric value is accept.>
+[.#MSN08.]<The FP must be bigger than Zero.>
+[.#MSN09.]<It is necessary that the PF number is bigger than 500
+for that the final value of the analise don´t be affected.
+Continue?>
+[.#MSN10.]<Do you want delete the functionality?>
+[.#MSN11.]<Do you want updating preview hours?>
+[.#MSN12.]<It is necessary that the number: positive and integer.>
+[.#MSN13.]<It is necessary to inform the value of real hours.>
+
+
+[.#GTPF01.]<FP>
+[.#GTPF02.]<Points Function>
+[.#GTPF03.]<FP>
+
+[.#GTFDF01.]<DFf>
+[.#GTFDF02.]<Dependent Functions>
+[.#GTFDF03.]<[(Ue + Uy + I + C)/20.] x U>
+
+[.#GTCE01.]<EM>
+[.#GTCE02.]<Explicitly Measurable>
+[.#GTCE03.]<F + P + S + A>
+
+[.#GTCI01.]<IM>
+[.#GTCI02.]<Implicity Measurable>
+[.#GTCI03.]<n x 0,02 (n de 0 a 4)>
+
+[.#GTQRD01.]<DQ>
+[.#GTQRD02.]<Dynamic Quality>
+[.#GTQRD03.]<EM + IM>
+
+[.#GTPTD01.]<DTP>
+[.#GTPTD02.]<Dynamic Testing Points>
+[.#GTPTD03.]<FP x DF x DQ>
+
+[.#GTPTE01.]<SPT>
+[.#GTPTE02.]<Static Testing Points>
+[.#GTPTE03.]<16 x n (n de 0 a 4)>
+
+[.#GTPT01.]<TP>
+[.#GTPT02.]<Testing Points>
+[.#GTPT03.]<Sum(PTDf) + (PF x PTE) / 500)>
+
+[.#GTAT01.]<TE>
+[.#GTAT02.]<Testing Environment>
+[.#GTAT03.]<(Sum of all factors)/21>
+
+[.#GTQET01.]<TTQ>
+[.#GTQET02.]<Testing Team Qualifition>
+[.#GTQET03.]<Entre 0,7 e 2,0>
+
+[.#GTHTP01.]<PTH>
+[.#GTHTP02.]<Primary Testing Hours>
+[.#GTHTP03.]<TP x TTQ x TE>
+
+[.#GTIPC01.]<PCI>
+[.#GTIPC02.]<Planning and Control Index>
+[.#GTIPC03.]<1 + (Team + Tool)>
+
+[.#GTTHT01.]<THT>
+[.#GTTHT02.]<Testing Hours Total>
+[.#GTTHT03.]<PTH + PCI>
+
+[.#SIM.]<Yes>
+[.#NAO.]<No>
+[.#CANCEL.]<Cancel>
+
+[.#NOME.]<Name>
+[.#EMAIL.]<Email>
+[.#ENVIAR.]<Send>
+[.#SAIR.]<Exit>
+
+[.#CODIGO.]<Id>
+[.#TITULO.]<Title>
+[.#TIPOPR.]<Project Kind>
+[.#LINGUA.]<Language>
+
+[.#FORMEMAIL.]<Email>
+[.#MSN100.]<It is necessary to inform your name.>
+[.#MSN101.]<It is necessary to inform a valid email.>
+[.#MSN102.]<Email send with succeeding.>
+
+[.#FORMPROJETO.]<Projects>
+[.#MSN200.]<It is necessary to inform Project ID.>
+[.#MSN201.]<It is necessary to inform Project Kind.>
+[.#MSN202.]<It is necessary to inform Project Title.>
+
+[.#VISU01.]<Wizard>
+[.#VISU02.]<General>
